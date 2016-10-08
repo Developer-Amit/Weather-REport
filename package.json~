@@ -1,0 +1,26 @@
+{
+  "name": "Weather-REport",
+  "version": "1.0.0",
+  "description": " Use AngularJS,OpenWeatherMap API, Simple App ",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -a 127.0.0.1 -p 7777 ./app",
+    "watch": "node-sass -w --output-style compressed app/scss/theme.scss -o app/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Developer-Amit/Weather-REport.git"
+  },
+  "author": "Amit Mishra <amitmishra1628@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "git@github.com:Developer-Amit/Weather-REport.git/issues"
+  },
+  "homepage": "git@github.com:Developer-Amit/Weather-REport.git#readme",
+  "devDependencies": {
+    "http-server": "^0.8.5",
+    "node-sass": "^3.4.2"
+  }
+}
+

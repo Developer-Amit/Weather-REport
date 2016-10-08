@@ -1,0 +1,39 @@
+///////////////
+// Variables //
+///////////////
+$FontPath: "../fonts" !default;
+
+////////////
+// Mixins //
+////////////
+@mixin fontdef-woff($FontPath, $FontName) {
+  src: url('#{$FontPath}/#{$FontName}.eot');
+  src: url('#{$FontPath}/#{$FontName}.eot?#iefix') format('eot'),
+      url('#{$FontPath}/#{$FontName}.woff2') format('woff2'),
+      url('#{$FontPath}/#{$FontName}.woff') format('woff'),
+      url('#{$FontPath}/#{$FontName}.ttf') format('truetype');
+}
+
+/////////////////////////////
+// Roboto font declaration //
+/////////////////////////////
+@font-face {
+  font-family: Roboto;
+  @include fontdef-woff($FontPath, "roboto-light");
+  font-weight: 300;
+  font-style: normal;
+}
+
+///////////////////////////
+// Icon font declaration //
+///////////////////////////
+@font-face {
+  font-family: Meteocons;
+  @include fontdef-woff($FontPath, "meteocons");
+  font-weight: normal;
+  font-style: normal;
+
+  text-rendering: auto; // Cross browser compatibility
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); // Ensures no half-pixel rendering in firefox
+}
